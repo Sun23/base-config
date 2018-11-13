@@ -10,7 +10,7 @@ module.exports = (env, argv) => ({
   },
 
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: 'js/[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: ''
   },
@@ -103,8 +103,8 @@ module.exports = (env, argv) => ({
     }),
     new HtmlWebpackPlugin({
       filename: `${env.target}.html`,
-      title: 'my App t',
-      template: ''
+      title: 'my App',
+      template: path.resolve(__dirname, 'src/assets/template/index.html')
     })
   ]
 })
