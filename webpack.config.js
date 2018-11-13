@@ -103,7 +103,7 @@ module.exports = (env, argv) => ({
     }),
     new HtmlWebpackPlugin({
       filename: `${env.target}.html`,
-      title: 'my App',
+      title: 'my App t',
       template: ''
     })
   ]
