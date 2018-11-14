@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "semi": [0]
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}
