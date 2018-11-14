@@ -1,8 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
-const devServer = require('webpack-dev-server')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
 module.exports = (env, argv) => ({
   devtool: 'cheap-module-source-map',
@@ -13,12 +12,12 @@ module.exports = (env, argv) => ({
     filename: 'js/[name].js',
     chunkFilename: 'js/[name].js', // 指定分离出来的代码文件的名称
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/static/' // 解释： https://juejin.im/post/5ae9ae5e518825672f19b094
+    publicPath: '/' // 解释： https://juejin.im/post/5ae9ae5e518825672f19b094
   },
 
   devServer: {
     hot: true,
-    publicPath: '/static/',
+    publicPath: '/',
     proxy: {
       '/api': {
         target: "http://10.0.0.130:8555", // 将 URL 中带有 /api 的请求代理到本地的 3000 端口的服务上
@@ -87,7 +86,7 @@ module.exports = (env, argv) => ({
     }),
     new webpack.NamedModulesPlugin(), // 用于启动 HMR 时可以显示模块的相对路径
     new webpack.HotModuleReplacementPlugin(), // Hot Module Replacement 的插件
-    new OpenBrowserPlugin({url: 'http://localhost:8080/static/index.html/'})
+    new OpenBrowserPlugin({url: 'http://localhost:8080/'})
   ],
 
   // 优化部分
