@@ -1,6 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
-import styles from './assets/style/app.css'
+import Page1 from 'Page/Page1'
+import Page2 from 'Page/Page2'
 
-ReactDOM.render(<a style={styles.dddd}>sssss</a>, document.getElementById('root'))
+const Index = () => <Router>
+  <Switch>
+    <Route path="/" component={Page1} exact />
+    <Route path="/page2" component={Page2} />
+  </Switch>
+</Router>
+
+ReactDOM.render(<Index />, document.getElementById('root'))
