@@ -6,15 +6,8 @@
     "es6": true
   },
   "parser": "babel-eslint",
-  "plugins": [
-    "react",
-    "jsx-a11y",
-    "import"
-  ],
+  "plugins": [ "react", "jsx-a11y", "import" ],
   "rules": {
-    "semi": [0]
-  },
-  "settings": {
-    "import/resolver": "webpack"
+    "semi": [ 0 ]
   }
 }

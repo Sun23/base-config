@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production --color",
+    "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --config ./webpack.config.dev.js",
     "lint:fix": "eslint ./src/*.js --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,7 +22,6 @@
     "css-loader": "^1.0.1",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-import-resolver-webpack": "^0.10.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",

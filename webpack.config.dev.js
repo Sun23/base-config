@@ -6,7 +6,7 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 module.exports = (env, argv) => ({
   devtool: 'cheap-module-source-map',
 
-  entry: './src/App.js',
+  entry: './src/App.jsx',
 
   output: {
     filename: 'js/[name].js',
@@ -135,12 +135,6 @@ module.exports = (env, argv) => ({
     extensions: ['.js', 'jsx'],
 
     // 避免新增默认文件，编码时使用详细的文件路径，代码会更容易解读，也有益于提高构建速度 （默认就是index）
-    mainFiles: ['index'],
-
-    // 默认路径 方便管理路径
-    alias: {
-      Component: path.resolve(__dirname, 'src/component/'),
-      Page: path.resolve(__dirname, 'src/page/')
-    }
+    mainFiles: ['index']
   }
 })

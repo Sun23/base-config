@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Page1 from 'Page/Page1'
-import Page2 from 'Page/Page2'
+import Page1 from './page/Page1'
+import Page2 from './page/Page2'
 
 const App = () => (
   <div>

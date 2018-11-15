@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin') // 压缩js
 
 module.exports = (env, argv) => ({
-  entry: './src/App.js',
+  entry: './src/App.jsx',
 
   output: {
     filename: 'js/[name].[hash:8].js',
@@ -168,12 +168,6 @@ module.exports = (env, argv) => ({
     extensions: ['.js', 'jsx'],
 
     // 避免新增默认文件，编码时使用详细的文件路径，代码会更容易解读，也有益于提高构建速度 （默认就是index）
-    mainFiles: ['index'],
-
-    // 默认路径 方便管理路径
-    alias: {
-      Component: path.resolve(__dirname, 'src/component/'),
-      Page: path.resolve(__dirname, 'src/page/')
-    }
+    mainFiles: ['index']
   }
 })
