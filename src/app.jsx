@@ -1,9 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Loadable from 'react-loadable'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Page1 from './page/Page1'
-import Page2 from './page/Page2'
+import Loading from './component/Loading'
+
+const Page1 = Loadable({
+  loader: () => import(
+    /* webpackChunkName: "Page1" */
+    './page/Page1',
+  ),
+  loading: Loading,
+})
+
+const Page2 = Loadable({
+  loader: () => import(
+    /* webpackChunkName: "Page2" */
+    './page/Page2',
+  ),
+  loading: Loading,
+})
 
 const App = () => (
   <div>
