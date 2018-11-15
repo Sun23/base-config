@@ -1,8 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Loadable from 'react-loadable'
+import { hot } from 'react-hot-loader'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
 import Loading from './component/Loading'
 
 const Page1 = Loadable({
@@ -32,4 +31,4 @@ const App = () => (
   </div>
 )
 
-ReactDOM.render(<App />, document.getElementById('root'))
+export default hot(module)(App)

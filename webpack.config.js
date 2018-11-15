@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin') // 压缩js
 
 module.exports = (env, argv) => ({
-  entry: './src/App.jsx',
+  entry: './src/index.jsx',
 
   output: {
     filename: 'js/[name].[hash:8].js',

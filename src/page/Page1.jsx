@@ -11,6 +11,7 @@ class Page1 extends React.Component {
     return (
       <div>
         <Link to="/page2">to page2</Link>
+        <div>test hot replace</div>
       </div>
     )
   }

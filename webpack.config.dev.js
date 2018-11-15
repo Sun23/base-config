@@ -6,7 +6,7 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 module.exports = (env, argv) => ({
   devtool: 'cheap-module-source-map',
 
-  entry: './src/App.jsx',
+  entry: './src/index.jsx',
 
   output: {
     filename: 'js/[name].js',
