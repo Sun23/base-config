@@ -1,0 +1,20 @@
+{
+  "[javascript]": {
+    "compilerOptions": {
+      "paths": {
+        "Page/*": ["src/page/*"],
+        "Components/*": ["src/components/*"],
+      }
+    },
+    "exclude": ["node_modules", "dist"],
+  },
+  "[javascriptreact]": {
+    "compilerOptions": {
+      "paths": {
+        "Page/*": ["src/page/*"],
+        "Components/*": ["src/components/*"],
+      }
+    },
+    "exclude": ["node_modules", "dist"],
+  },
+}
